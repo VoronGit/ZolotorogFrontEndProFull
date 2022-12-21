@@ -6,7 +6,7 @@ function removeElement(arr, item) {
         if (index !== -1) {
             arr.splice(index, 1);
         } else {
-            console.log("Given item not in Array!")
+            console.log("Given item not in Array!");
         }
     }
 }
