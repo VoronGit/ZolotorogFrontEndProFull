@@ -1,9 +1,7 @@
 const img = document.getElementsByClassName('imgToChange')[0];
-let currImg = 1
+let currImg = 1;
 
-document.getElementById('prev').setAttribute('disabled', 'true');
-
-Array.from(document.getElementsByClassName('sideButton')).forEach(element => {
+document.querySelectorAll('.sideButton').forEach(element => {
     element.addEventListener('click', function() {
         currImg += +element.value;
         img.src = `image${currImg}.jpg`;
