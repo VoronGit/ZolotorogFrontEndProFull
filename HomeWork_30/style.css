@@ -50,7 +50,6 @@ h1 {
 
 .modalBody div {
     display: flex;
-    
     flex-direction: column;
 }
 
