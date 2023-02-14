@@ -11,17 +11,7 @@ mainBody.addEventListener('click', event => {
                 let resultHTML = '';
                 if (response.ok) {
                     const json = await response.json();
-                    console.log(json);
-                    json.forEach(elem => {
-                        resultHTML += `<div>
-                        <span>
-                          <h2>${elem.name}</h2> 
-                        </span> 
-                        <span>
-                          ${elem.body}
-                        </span>
-                      </div>`;
-                    });
+                    resultHTML = renderComments(json);
                 } else {
                     resultHTML = 'Comments not found :(';
                 }
@@ -31,14 +21,23 @@ mainBody.addEventListener('click', event => {
     }
 });
 
+function renderComments(array) {
+  return array.map(elem => `<div>
+    <span>
+      <h2>${elem.name}</h2> 
+    </span> 
+    <span>
+      ${elem.body}
+    </span>
+  </div>`).join('');
+};
+
 document.getElementById('getPostIdForm').addEventListener('submit', event => {
     event.preventDefault();
 
-    const formDataObj = Object.fromEntries(new FormData(event.target).entries());
-
+    const formElement = document.querySelector('form');
     commBody.innerHTML = '';
-
-    fetch(`${mainURL}${formDataObj.id}`, {
+    fetch(`${mainURL}${formElement.id.value}`, {
         method: 'GET'
     })
         .then(async (response) => {
