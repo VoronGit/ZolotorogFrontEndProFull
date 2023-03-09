@@ -1,36 +1,30 @@
-import { getUserByName, getUserInfractions } from './user-api.js';
-
+import { fetchGetUserByName, fetchGetUserInfractions } from './async-calls.js';
 
 export async function getRelevantInfractionReasons(username) {
 	// Get API info
-	const userG = await new Promise((resolveIns, rejectIns) => getUserByName(username, (user) => resolveIns(user), () => { rejectIns("User info not found!") }))
-		.then((user) => { return user })
-		.catch((error) => {
-			console.error(error);
-			return {};
-		});
-	const infG = userG.id ? await new Promise((resolveIns, rejectIns) => getUserInfractions(userG.id, (inf) => { resolveIns(inf) }, () => { rejectIns("User infractions not found!") }))
-		.then((inf) => { return inf })
-		.catch((error) => {
-			console.error(error);
-			return [];
-		}) : [];
+	try {
+		const user = await fetchGetUserByName(username);
+		const inf = await fetchGetUserInfractions(user.id);
 
-	if (infG && infG.length > 0) {
-		// find most recent and worst infraction
-		let foundIndexRecent = 0;
-		let foundIndexWorst = 0;
-		for (let i = 1; i < infG.length; i++) {
-			if (infG[i].id > infG[foundIndexRecent].id) {
-				foundIndexRecent = i;
+		if (inf && inf.length > 0) {
+			// find most recent and worst infraction
+			let foundIndexRecent = 0;
+			let foundIndexWorst = 0;
+			for (let i = 1; i < inf.length; i++) {
+				if (inf[i].id > inf[foundIndexRecent].id) {
+					foundIndexRecent = i;
+				}
+				if (inf[i].points > inf[foundIndexWorst].points) {
+					foundIndexWorst = i;
+				}
 			}
-			if (infG[i].points > infG[foundIndexWorst].points) {
-				foundIndexWorst = i;
-			}
+			const finObj = { "mostRecent": replaceURLs(inf[foundIndexRecent].reason), "worst": replaceURLs(inf[foundIndexWorst].reason) };
+			return finObj;
+		} else {
+			return {};
 		}
-		const finObj = { "mostRecent": replaceURLs(infG[foundIndexRecent].reason), "worst": replaceURLs(infG[foundIndexWorst].reason) };
-		return finObj;
-	} else {
+	} catch (error) {
+		console.log(error);
 		return {};
 	}
 }
