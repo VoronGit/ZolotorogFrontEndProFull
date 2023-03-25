@@ -9,9 +9,7 @@ function App() {
   const [emoji, changeWinningEmoji] = useState({});
 
   const closeModalOnClick = (event) => {
-    if (event.target.getAttribute('canclose')) {
       changeShowModal(false);
-    }
   }
 
   const checkResultsOnClick = async () => {

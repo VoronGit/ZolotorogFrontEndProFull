@@ -8,7 +8,7 @@ import getWebsocketReady from '../functions/websocket.js';
 
 
 
-function Board(props) {
+function Board({ onClickCastVote, onClickCheckResults }) {
     const [cardList, changeCardList] = useState([]);
 
     useEffect(() => {
@@ -24,9 +24,9 @@ function Board(props) {
     return (
         <div className={styles.board}>
             <div className={styles.emojiField}>
-                {cardList.map(el => { return <Card key={'emojiCard' + el.id} emoji={el} onClick={props.onClickCastVote}></Card> })}
+                {cardList.map(el => { return <Card key={el.id} emoji={el} onClick={onClickCastVote}></Card> })}
             </div>
-            <CheckButton onClick={props.onClickCheckResults}></CheckButton>
+            <CheckButton onClick={onClickCheckResults}></CheckButton>
         </div>
     );
 }

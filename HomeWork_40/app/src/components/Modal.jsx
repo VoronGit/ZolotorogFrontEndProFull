@@ -1,13 +1,19 @@
 import styles from "../styles/modal.module.css";
 import Card from './Card.jsx';
 
-function Modal(props) {
+function Modal({ emoji, closeOnClick }) {
+    const closeModalOnClick = (event) => {
+        if (event.target.getAttribute('data-canclose')) {
+            closeOnClick();
+        }
+    }
+
     return (
-        <div key='modal' canclose='true' className={styles.background} onClick={props.closeOnClick}>
+        <div data-canclose='true' className={styles.background} onClick={closeModalOnClick}>
             <div className={styles.body}>
                 <h1 className="nonselect">The most popular emoji(-s) is:</h1>
                 <div className={`${styles.cardHolder} nonselect`}>
-                    {props.emoji.map(el => { return <Card key={'modalCard' + el.id}emoji={el} onClick={props.onClickCastVote}></Card> })}
+                    {emoji.map(el => { return <Card key={el.id} emoji={el} ></Card> })}
                 </div>
             </div>
         </div>
