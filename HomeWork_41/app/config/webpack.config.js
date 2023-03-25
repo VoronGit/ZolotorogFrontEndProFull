@@ -528,6 +528,22 @@ module.exports = function (webpackEnv) {
             // Adds support for CSS Modules, but using SASS
             // using the extension .module.scss or .module.sass
             {
+              test: /\.less$/,
+              use: getStyleLoaders(
+                {
+                  modules: true,
+                  importLoaders: 3,
+                  sourceMap: isEnvProduction && shouldUseSourceMap,
+                },
+                'less-loader'
+              ),
+              // Don't consider CSS imports dead code even if the
+              // containing package claims to have no side effects.
+              // Remove this when webpack adds a warning or an error for this.
+              // See https://github.com/webpack/webpack/issues/6571
+              sideEffects: true,
+            },
+            {
               test: sassModuleRegex,
               use: getStyleLoaders(
                 {
