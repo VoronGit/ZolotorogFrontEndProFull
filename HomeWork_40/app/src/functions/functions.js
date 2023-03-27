@@ -1,4 +1,4 @@
-import { getDataAPI, castVoteAPI, getBestEmojiAPI, getWebsocketReady } from './apiCalls.js';
+import { getDataAPI, castVoteAPI, getBestEmojiAPI } from './apiCalls.js';
 
 export const getInfo = async () => {
     const res = await getDataAPI();
