@@ -1,0 +1,197 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap:120px;
+}
+
+.heroBackground {
+    position: absolute;
+    width: 100%;
+    padding-top: 158px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: -1;
+}
+
+.heroScreen {
+    padding: 72px 0 194px 0;
+}
+
+.heroInsideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 88px;
+    width: 50%;
+}
+
+.heroHeaders{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.buttonsAndSocials {
+    display: flex;
+    flex-direction: column;
+    gap: 62px;
+}
+
+.buttonsRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 67px;
+}
+
+.socialsRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 42px;
+    padding-right: 80px;
+}
+
+.overflow2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.motivationIns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 44px;
+}
+
+.motivationMainText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.clickableText {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.mainTextPictures {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px
+}
+
+.mainTextPictures img{
+    height: auto;
+    max-width: 100%;
+    min-width: 50%;
+    resize: both;
+}
+
+.pointsRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.pointsRow div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.pointsRow div h1{
+    margin: auto!important;
+}
+
+.howToHelp {
+    padding: 32px 0;
+    background-color: #F2F4F8;
+}
+
+.howToHelp > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.howToHelpIns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.howToHelpIns > div{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+.howToHelpIns > div img{
+    margin: 0 0 auto 0;
+}
+
+.howToHelpIns > div > div{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.caruselWithButton {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.caruselWithButton > div:last-child {
+    margin: 0 auto;
+}
+
+.carusele{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.givingForFree {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background-color: #D5E1FB;
+    padding: 32px 0;
+}
+
+.givingForFreeRows {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:25px;
+}
+
+.forFreeCard {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.forFreeCard img{
+    height: 415px;
+    width: 370px;
+    border-radius: 20px;
+}
+
+.bottomBackground {
+    padding-left: 10px;
+    margin-bottom: -90px;
+    z-index: -1;
+}

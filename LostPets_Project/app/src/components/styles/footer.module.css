@@ -1,0 +1,27 @@
+.main {
+    background-color: #8EA2CA;
+    display: flex;
+    width: 100%;
+}
+
+.container {
+    padding: 58px 136px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+h1 {
+    margin: 0!important;
+}
+
+.column a:first-child h1{
+    font-weight: 600;
+}

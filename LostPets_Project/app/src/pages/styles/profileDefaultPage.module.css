@@ -1,0 +1,101 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.firstRow {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+}
+
+.firstRow img {
+    width: 274px;
+    height: 312px;
+}
+
+.tagLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mainDescriptionBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mainDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.servicesBox {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.servicesRow {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.serviceTagActive {
+    border: 1px solid #D4E1FB;
+    background: #D4E1FB;
+    border-radius: 30px;
+    padding: 8px 33px;
+    min-width: 175px;
+    max-width: 175px;
+}
+
+.serviceTagNotActive {
+    border: 1px solid #D4E1FB;
+    background: #FFFFFF;
+    border-radius: 30px;
+    padding: 8px 33px;
+    min-width: 175px;
+    max-width: 175px;
+}
+
+.servicesRow h1 {
+    margin: auto;
+    text-align: center;
+}
+
+.decriptionsRow {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.fieldWithData {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.socialsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.socialsRowCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.socialsRowCard>a>img {
+    width: auto;
+    height: 40px;
+}

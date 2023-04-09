@@ -1,0 +1,19 @@
+.main {
+    width: 110%;
+    position: relative;
+    left: -5%;
+    display: flex;
+}
+
+.main > div {
+    width: 1168px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main > img:last-child {
+    rotate: 180deg;
+}

@@ -1,0 +1,14 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: auto;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+
+.main > div{
+    display: flex;
+    flex-direction: row;
+}

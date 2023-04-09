@@ -1,0 +1,72 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.messageBox > img {
+    height: auto;
+    margin: auto 0;
+    width: 74px;
+    border-radius: 50%;
+}
+
+.messageBox {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.messageBoxInside {
+    border: 1px solid #455B88;
+    border-radius: 20px;
+    padding: 12px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background-color: white;
+}
+
+.messageBoxLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px
+}
+
+.messageBoxLine>h1:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.unreadMessages {
+    min-width: 32px;
+    min-height: 32px;
+    max-width: 32px;
+    max-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #D5E1FB;
+    border-radius: 50%;
+}
+
+.messageBoxLineVert {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.imgInTextRow {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.imgInText {
+    height: 150px;
+}

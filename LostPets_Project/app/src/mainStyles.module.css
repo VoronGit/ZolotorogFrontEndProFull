@@ -1,0 +1,111 @@
+.HeadLine1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 84px;
+}
+
+.HeadLine2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 84px;
+}
+
+.HeadLine3 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.HeadLine4 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.Body1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.Body2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.Body3 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.Details {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.textMainColor {
+    color: #524F4E;
+}
+
+.footerText {
+    color: #FFFFFF;
+}
+
+.Background {
+    background-color: #FFFFF9;
+}
+
+.MainColor {
+    background-color: #F6F6B8;
+}
+
+.MainColor2 {
+    background-color: #B3B37D;
+}
+
+.TextMainColor3 {
+    color: #FFFFFF;
+}
+
+.MainColor3 {
+    background-color: #FFFFFF;
+}
+
+.MainColor4 {
+    background-color: #D5E1FB;
+}
+
+.TextMainColor5 {
+    color: #455B88;
+}
+
+.MainColor5 {
+    background-color: #455B88;
+}
+
+.FooterColor {
+    background-color: #8EA2CA;
+}
+
+.ButtonPopUp {
+    background-color: #F5F8FF;
+}
