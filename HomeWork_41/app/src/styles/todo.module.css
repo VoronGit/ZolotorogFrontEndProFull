@@ -26,6 +26,8 @@ svg {
 .text {
     text-align: left;
     font-size: 26px;
+    word-wrap: break-word;
+    overflow: auto;
 }
 
 .checked {
